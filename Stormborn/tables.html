@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    
+}
+
+</style>
+<script src="js/jquery-3.2.1.min.js" defer></script>
+<script src="js/jsonhelper.js" defer></script>
+<script src="js/ajaxcalls.js" defer></script>    
+<script src="js/results.js" defer></script>    
+</head>
+<body>
+    
+<table>
+  <tr>
+    <th colspan="2">Time</th>
+    <th rowspan="2">Savings</th>
+  </tr>
+  <tr>
+    <th>Month</th> <th>Year</th>
+  </tr>
+  <tr><td>January</td><td>1928</td> <td>$200</td></tr>
+ <tr><td>June</td><td>1989</td> <td>$500</td></tr>
+ 
+</table>
+
+<div id="test-results">
+<div id = "country-results">
+</div>
+<div id="state-results">
+<h3>State Test Results</h3>
+<table>
+  <tr>
+    <th rowspan="2">State</th>
+    <th colspan="2">Reliable Wins in 2008</th>
+    <th colspan="2">Reliable Wins in 2006</th>
+    <th colspan="2">Reliable Wins in 2004</th>
+  </tr>
+  <tr>
+    <th>Mean-Median<br> Difference</th> <th>Significance<br> Level</th>
+    <th>Mean-Median<br> Difference</th> <th>Significance<br> Level</th>
+    <th>Mean-Median<br> Difference</th> <th>Significance<br> Level</th>  
+  </tr>
+  <tr><td>New York</td><td>5%</td><td>20%</td> <td>10%</td><td>10%</td> <td>15%</td><td>40%</td></tr> 
+</table>   
+</div>
+
+<div id="aggregates">
+<h3>Aggregates</h3>
+<table>
+  <tr>
+    <th rowspan="2">State</th>
+    <th colspan="2">Reliable Wins in 2008</th>
+    <th colspan="2">Reliable Wins in 2006</th>
+    <th colspan="2">Reliable Wins in 2004</th>
+  </tr>
+  <tr>
+    <th>Mean-Median<br> Difference</th> <th>Significance<br> Level</th>
+    <th>Mean-Median<br> Difference</th> <th>Significance<br> Level</th>
+    <th>Mean-Median<br> Difference</th> <th>Significance<br> Level</th>  
+  </tr>
+  <tr><td>New York</td><td>5%</td><td>20%</td> <td>10%</td><td>10%</td> <td>15%</td><td>40%</td></tr>
+  <tr><td>California</td><td>20%</td><td>5%</td> <td>5%</td><td>5%</td> <td>10%</td><td>45%</td></tr>    
+ 
+</table>    
+</div> 
+
+</div>
+   
+    
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>-Stormborn Maps-</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        -->
+        
+        <!-- CSS -->
+        <link href="css/SB.css" rel="stylesheet">
+        
+        <!-- JAVASCRIPT -->
+        <script src="js/jquery-3.2.1.min.js"></script>   
+        <script src="js/SB.js"></script>
+        
+        <!-- MISC -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="math.js"></script>
+        
+        <!-- LEAFLET FILES -->
+        <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+        <script src="lib/leaflet/leaflet.js"></script>
+        
+        <!-- TURF -->
+        <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+        
+        <!-- TEST RESULT LOGIC, HELPERS AND AJAX -->
+        <script src="js/jsonhelper.js" defer></script>
+	<script src="js/ajaxcalls.js" defer></script>  
+	<script src="js/users.js" defer></script>  
+        <script src="js/results.js" defer></script>
+        <script src="js/charts.js" defer></script>
+        <!--MAP JAVASCRIPT-->
+        <script src="js/homeMap.js" defer></script>
+        
+        <!-- GEOJSON FILES -->
+        <script src="data/my_map.geojson"></script>
+<!--         <script src="data/CD2016.geojson"></script> -->
+        
+        <!-- C3 FILES -->
+        <link href="css/c3.css" rel="stylesheet">
+        <script src="js/d3.v3.min.js"></script>
+        <script src="js/c3.min.js"></script>
+    </head>
+    <body>
+        <image src="Images/banner.gif" class="banner"> </image>
+        <div class="flex-container">
+            <div class="nav-bar">
+                <form id="log-in">
+                    <input id="login-username" type="text" placeholder="Username" class="register" required>
+                    <input id="login-password" type="password" placeholder="Password" required>
+                    <button class="log-in-button" type="submit" id="loginBtn"><b>Log In</b></button>
+                </form>
+                <button onclick="hideRegister()" class="open-sign-up-button"><u>Register for an Account</u></button>
+                <div id="myDIV">
+                    <form id="sign-up">
+                        <input type="text" id="register-first-name" placeholder="First Name" required>
+                        <input type="text" id="register-last-name" placeholder="Last Name" required><br><br>
+                        <input type="text" id="register-username" placeholder="Username" required>
+                        <input type="password" id="register-password" placeholder="Password" required><br><br>
+                        <input type="text" id="register-email" placeholder="email" required><br><br>
+                        <button class="create-superdistrict-button" id="register-btn">Register</button>
+                    </form>
+                </div>
+            </div>
+            <!-- The primary navigation bar -->
+            <div class="nav-bar">
+                <a href="index.html" class="nav-button"><b>HOME</b></a>
+                <a href="superdistrict.html" class="nav-button">Super Districts</a>
+                <a href="help.html" class="nav-button">Help</a>
+                <a href="info.html" class="nav-button">About</a>
+                <a href="contact.html" class="nav-button">Contact</a>
+                <a href="credit.html" class="nav-button">Credits</a>
+                <a href="admin.html" class="nav-button">ADMIN (TEST)</a>
+                <a href="userEdit.html" class="nav-button">USER EDIT</a>
+                
+            </div>
+            <!-- The Leaflet Map -->
+            <div id="map"></div>
+            <div class="zoom-button-container">
+                <button class="zoom-button" onclick="zoomToCountry()">Country View</button>
+                <button class="zoom-button" onclick="zoomToStates()">State View</button>
+                <button class="zoom-button" onclick="zoomToDistricts()">District view</button>
+            </div>
+            <div id="second-nav-bar">
+                <ul>
+                    <li>
+                        <select id="stateSelect" class="dropdown-style">
+                            <option value="-1" selected>Select State</option>
+                            <option value="00">United States</option>
+                            <option value="01">Alabama</option>
+                            <option value="02">Alaska</option>
+                            <option value="04">Arizona</option>
+                            <option value="05">Arkansas</option>
+                            <option value="06">California</option>
+                            <option value="08">Colorado</option>
+                            <option value="09">Connecticut</option>
+                            <option value="10">Delaware</option>
+                            <option value="12">Florida</option>
+                            <option value="13">Georgia</option>
+                            <option value="15">Hawaii</option>
+                            <option value="16">Idaho</option>
+                            <option value="17">Illinois</option>
+                            <option value="18">Indiana</option>
+                            <option value="19">Iowa</option>
+                            <option value="20">Kansas</option>
+                            <option value="21">Kentucky</option>
+                            <option value="22">Louisiana</option>
+                            <option value="23">Maine</option>
+                            <option value="24">Maryland</option>
+                            <option value="25">Massachusetts</option>
+                            <option value="26">Michigan</option>
+                            <option value="27">Minnesota</option>
+                            <option value="28">Mississippi</option>
+                            <option value="29">Missouri</option>
+                            <option value="30">Montana</option>
+                            <option value="31">Nebraska</option>
+                            <option value="32">Nevada</option>
+                            <option value="33">New Hampshire</option>
+                            <option value="34">New Jersey</option>
+                            <option value="35">New Mexico</option>
+                            <option value="36">New York</option>
+                            <option value="37">North Carolina</option>
+                            <option value="38">North Dakota</option>
+                            <option value="39">Ohio</option>
+                            <option value="40">Oklahoma</option>
+                            <option value="41">Oregon</option>
+                            <option value="42">Pennsylvania</option>
+                            <option value="44">Rhode Island</option>
+                            <option value="45">South Carolina</option>
+                            <option value="46">South Dakota</option>
+                            <option value="47">Tennessee</option>
+                            <option value="48">Texas</option>
+                            <option value="49">Utah</option>
+                            <option value="50">Vermont</option>
+                            <option value="51">Virginia</option>
+                            <option value="53">Washington</option>
+                            <option value="54">West Virginia</option>
+                            <option value="55">Wisconsin</option>
+                            <option value="56">Wyoming</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="yearSelect" class="dropdown-style">
+                            <option value="-1" selected>Select Year</option>
+                            <option value="90">1990</option>
+                            <option value="92">1992</option>
+                            <option value="94">1994</option>
+                            <option value="96">1996</option>
+                            <option value="98">1998</option>
+                            <option value="00">2000</option>
+                            <option value="02">2002</option>
+                            <option value="06">2004</option>
+                            <option value="06">2006</option>
+                            <option value="08">2008</option>
+                            <option value="10">2010</option>
+                            <option value="12">2012</option>
+                            <option value="14">2014</option>
+                            <option value="16">2016</option>
+                        </select>
+                    </li>
+                    <!-- The Gerrymander Tests -->
+                    <li><input type="checkbox" id="checkboxEfficiency">Efficiency Gap</li>
+                    <li><input type="checkbox" id="checkboxExcess" >Excess</li>
+                    <li><input type="checkbox" id="checkboxLopsided">Lopsided</li>
+                    <li><input type="checkbox" id="checkboxReliable">Reliable</li>
+                    <li><button id="run-test-button">RUN TEST</button></li>
+                    <li><button id="clear-button">Clear Results</button></li>
+                </ul>
+            </div>
+            <div id="results-container">
+                <div style="display: inline-block">
+                    <div id="qq" style="float: left; width: 370px; height: 370px;"></div>
+                    <div id="qqq" style="float: left;  width: 370px; height: 370px;"></div>
+                    <div id="qqqq" style="float: left;  width: 370px; height: 370px;"></div>
+                </div>
+                <div id="left-column">
+                    <div id="pie-one"></div>
+                    <div id="pie-two"></div>
+                    <div id="pie-three"></div> 
+                </div>
+                <div id="right-column">
+                    <div id="test-results"> 
+                        <div id = "country-results">
+                            <h3>Country Results</h3>
+                        </div>
+                        <div id="state-results">
+                            <h3>State Test Results</h3>
+                        </div>
+                        <div id="aggregates">
+                            <h3>Aggregates</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div style="float: left; text-align: left; padding-top: 10px;">
+                    <ul style="list-style: none; font-size: 12px; color: white; margin-top: -10px;">
+                        <li style="color: white; font-size: 15px;"><b>The Team</b></li>
+                        <li>Miraj Alam</li>
+                        <li>Salvatore Termine</li>
+                        <li>Samuel McKay</li>
+                        <li>Kyle Marcus Enriquez</li>
+                    </ul>
+                </div>
+                <div style="float: left; text-align: left; padding-top: 10px; padding-left: 50px">
+                    <ul style="list-style: none; font-size: 12px; color: white; margin-top: -10px;">
+                        <li><a href="index.html" class="text-link">HOME</a></li>
+                        <li><a href="superdistrict.html" class="text-link">SUPER DISTRICTS</a></li>
+                        <li><a href="help.html" class="text-link">HELP</a></li>
+                        <li><a href="about.html" class="text-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="text-link">CONTACT</a></li>
+                    </ul>
+                </div>
+                <h6 style="float: left; font-size: 12px; color: white; padding-top: 25px; padding-left: 50px">
+                    THIS SITE IS INTENDED TO DISPLAY UNBIASED DATA ON GERRYMANDERING.
+                </h6>
+                <h6 style="float: left; font-size: 12px; color: white; padding-top: 25px; padding-left: 70px">
+                    THIS WEBSITE WAS CREATED BY TEAM STORMBORN©2017
+                </h6>
+            </footer>
+        </div>
+    </body>
+</html>

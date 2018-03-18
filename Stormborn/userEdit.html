@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>-Stormborn Maps-</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Local CSS and Javscript libraries -->
+        <link href="css/SB.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-3.2.1.min.js"></script>   
+        <script src="js/ajaxcalls.js"></script>
+        <script src="js/users.js"></script> 
+        <!-- Imported CSS libraries -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+      
+    </head>
+    <body>
+        <image src="Images/banner.gif" class="banner">
+        <div class="flex-container">
+        <div class="nav-bar">
+                <form id="log-in">
+                    <input id="login-username" type="text" placeholder="Username" class="register" required>
+                    <input id="login-password" type="password" placeholder="Password" required>
+                    <button class="log-in-button" type="submit" id="loginBtn"><b>Log In</b></button>
+                </form>
+            </div>
+            <nav style="background-color: black;">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="superdistrict.html" class="nav-button">Super Districts</a>
+                <a href="help.html" class="nav-button"><b>HELP</b></a>
+                <a href="info.html" class="nav-button">About</a>
+                <a href="contact.html" class="nav-button">Contact</a>
+                <a href="credit.html" class="nav-button">Credit</a>
+            </nav>
+            <div id="container">
+                <h3 style="display: absolute; text-align: left;">User Information</h3>
+                <div id='user-info'>
+                    
+                </div>
+            </div>
+            <h2 id="userEditHeader">Update Information</h2>
+            <div id="myDIV">
+                    <form id="sign-up">
+                        <input type="text" id="register-first-name" placeholder="First Name" required>
+                        <input type="text" id="register-last-name" placeholder="Last Name" required><br><br>
+                        <input type="text" id="register-username" placeholder="Username" disabled>
+                        <input type="password" id="register-password" placeholder="Password" required><br><br>
+                        <input type="text" id="register-email" placeholder="email" required><br><br>
+                        <button class="create-superdistrict-button" id="update-btn">Update</button>
+                    </form>
+                </div>
+            <footer>
+                <div style="float: left; text-align: left; padding-top: 10px;">
+                    <ul style="list-style: none; font-size: 12px; color: white; margin-top: -10px;">
+                        <li style="color: white; font-size: 15px"><b>The Team</b></li>
+                        <li>Miraj Alam</li>
+                        <li>Salvatore Termine</li>
+                        <li>Samuel McKay</li>
+                        <li>Kyle Marcus Enriquez</li>
+                    </ul>
+                </div>
+                <div style="float: left; text-align: left; padding-top: 10px; padding-left: 50px">
+                    <ul style="list-style: none; font-size: 12px; color: white; margin-top: -10px;">
+                        <li><a href="index.html" class="text-link">HOME</a></li>
+                        <li><a href="superdistrict.html" class="text-link">SUPER DISTRICTS</a></li>
+                        <li><a href="help.html" class="text-link">HELP</a></li>
+                        <li><a href="about.html" class="text-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="text-link">CONTACT</a></li>
+                    </ul>
+                </div>
+                <h6 style="float: left; font-size: 12px; color: white; padding-top: 25px; padding-left: 50px">
+                    THIS SITE IS INTENDED TO DISPLAY UNBIASED DATA ON GERRYMANDERING.
+                </h6>
+                <h6 style="float: left; font-size: 12px; color: white; padding-top: 25px; padding-left: 70px">
+                    THIS WEBSITE WAS CREATED BY TEAM STORMBORN©2017
+                </h6>
+            </footer>
+        </div>
+    </body>
+</html>

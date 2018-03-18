@@ -1,0 +1,534 @@
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+.horizontal-divider{
+  border: 0; 
+  height: 1px; 
+  opacity: 0.4;
+  background-color:black;
+}
+.about-bg{
+    background-image: url("Images/bg1.jpg");
+    /* The image used */
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner{
+    height:150; 
+    width:100%;
+}
+header {
+    background: black;
+    color:white;
+}
+footer {
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    height: 135px;
+    width: 100%;
+}
+
+/*THE NAV BAR*/
+.nav-bar{
+    background-color: black;
+    margin-top: -15px;
+}
+.nav {
+    background-color: black;
+    display: block;
+}
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+}
+.nav ul a {
+    text-decoration: none;
+}
+.nav-button{
+    background-color: black;
+    border: none;
+    width: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    align-self: right;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.nav-button:hover {
+    background-color: #e7e7e7;
+    color: black;
+}
+.nav-p{
+    color: white
+}
+.help-button{
+    display: block;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    transition-duration: 0.4s;
+    transform: translate(50%);
+    opacity: 1;
+    text-decoration: none;
+}
+.help-button:hover{
+    background-color: #e7e7e7;
+    color: black;
+}
+.paragraphs{
+    text-align: justify; 
+    text-justify: inter-word;
+}
+.text-link{
+    text-decoration: none;
+}
+
+/*THE SECONDARY NAV BAR*/
+#second-nav-bar{
+    background: black;
+}
+#second-nav-bar ul{
+    list-style: none;
+}
+#second-nav-bar li{
+    display: inline;
+    color: white;
+}
+
+#run-test-button{
+    width: 200px;
+    height: 30px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 2px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.send-button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+#run-test-button-2{
+    width: 80px;
+    height: 30px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.automate-run-button{
+    width: 110px;
+    height: 30px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.automate-run-button:active, #run-test-button:active, #run-test-button-2:active {
+  background-color: darkgreen;
+  transform: translateY(4px);
+}
+.automate-run-button:hover, #run-test-button-2:hover, #run-test-button:hover {
+    background-color: #bfffc6;
+    color: black;
+}
+
+#clear-button{
+    width: 120px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#clear-button:active {
+  background-color: darkred;
+  transform: translateY(4px);
+}
+#clear-button:hover {
+    background-color: pink;
+    color: black;
+}
+
+.undo-button {
+    width: 50px;
+    height: 30px;
+    background-color: orange;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.undo-button:active {
+  background-color: orangered;
+  transform: translateY(4px);
+}
+.undo-button:hover {
+    background-color: wheat;
+    color: black;
+}
+
+/*THE TWO COLUMNS UNDER THE SECOND NAV BAR*/
+#container {
+    height: 100%; 
+    width:100%; 
+    left: 0px;
+    right: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#results-container{
+    height: 100%; 
+    width:100%; 
+    left: 0px;
+    right: 0px;
+}
+#left-column, #middle, #right-column {
+    display: inline-block; 
+    *display: inline; 
+    zoom: 1; 
+    vertical-align: top; 
+    font-size: 12px;
+}
+#left-column {
+    width: 25%; 
+    height: 100%;
+    background: white;
+    text-align: left;
+    float: left;
+}
+.left-super{
+    width: 25%; 
+    height: 100%;
+    background: white;
+    text-align: justify;
+}
+#middle {
+    width: 50%; 
+    background: white;
+}
+
+/*THE ZOOM BUTTONS*/
+.zoom-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+.zoom-button:active, .log-in-button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+.zoom-button:hover, .log-in-button:hover {
+    color: black;
+    background-color: white;
+}
+.zoom-button-container {
+    background-color: #4CAF50;
+}
+
+.log-in-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 4px 20px;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+.open-sign-up-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+}
+
+/*THE MAP*/
+#map {
+    height: 350px;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+
+/*THE DROPDOWN BUTTONS*/
+.dropdown-style {
+  background: #FFF;
+  overflow: hidden;
+  display: inline-block;
+  color: #525252;
+  font-weight: 300;
+  -webkit-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+  -moz-border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+  border-radius: 5px 4px 4px 5px/5px 5px 4px 4px;
+  -webkit-box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
+  -moz-box-shadow: 0 0 5px rgba(123,123,123,.2);
+  box-shadow: 0 0 5px rgba(123, 123, 123, 0.2);
+  border: solid 1px #DADADA;
+  font-family: 'helvetica neue',arial;
+  position: relative;
+  cursor: pointer;
+  padding-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.dropdown-style span {
+  position: absolute;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background: url('http://projects.authenticstyle.co.uk/niceselect/arrow.png') no-repeat;
+  top: 50%;
+  margin-top: -4px;
+}
+
+/*THE TABLES*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*CONTACT PAGE*/
+.emailbox {
+    width: 500px;
+    height: 75;
+    border: 2px solid #ccc;
+}
+.messagebox {
+    height: 200px;
+    width: 500px;
+    resize: none;
+    border: 2px solid #ccc;
+}
+.send-button{
+    width: 500px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.create-superdistrict-button{
+    width: 500px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.create-superdistrict-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.create-superdistrict-button span:after {
+  content: '\002b';
+  position: absolute;
+  opacity: 0;
+  font-size: 30px;
+  top: -13px;
+  right: -80px;
+  transition: 0.5s;
+}
+.create-superdistrict-button:hover span {
+  padding-right: 25px;
+}
+.create-superdistrict-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.create-superdistrict-button:active{
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+.send-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.send-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.send-button:hover span {
+  padding-right: 25px;
+}
+.send-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.send-button:active{
+  background-color: #3e8e41;
+  transform: translateY(4px);
+
+/*INFO PAGE*/
+.history {
+    text-align: justify;
+    margin-left: 70px;
+    margin-right: 70px;
+    color: #666666;
+}
+
+.username{
+    background-color: black;
+    border: none;
+    width: 100px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    align-self: right;
+}
+
+#register-button{
+    width: 500px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#register-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#register-button span:after {
+  content: '\002b';
+  position: absolute;
+  opacity: 0;
+  font-size: 30px;
+  top: -13px;
+  right: -80px;
+  transition: 0.5s;
+}
+#register-button:hover span {
+  padding-right: 25px;
+}
+#register-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#register-button:active{
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+#help-title {
+    background-color: green;
+    color: white; width: 50%; 
+    height: 80px; 
+    transform: translate(50%); 
+    opacity: 0.7; 
+    padding-top: 14px;
+}
+
